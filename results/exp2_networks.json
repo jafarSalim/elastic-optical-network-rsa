@@ -1,0 +1,46 @@
+{
+ "nsfnet": {
+  "nodes": 14,
+  "links": 22,
+  "link_km": [
+   150.0,
+   2400.0
+  ],
+  "shortest_path_km": {
+   "min": 150.0,
+   "median": 1950.0,
+   "max": 3900.0
+  },
+  "format_mix": {
+   "BPSK": 6,
+   "QPSK": 108,
+   "8QAM": 48,
+   "16QAM": 18,
+   "32QAM": 2,
+   "64QAM": 0
+  },
+  "mean_feasible_paths": 5.0
+ },
+ "germany50": {
+  "nodes": 50,
+  "links": 88,
+  "link_km": [
+   32.4,
+   315.3
+  ],
+  "shortest_path_km": {
+   "min": 32.4,
+   "median": 452.5999999999999,
+   "max": 1168.3999999999999
+  },
+  "format_mix": {
+   "BPSK": 0,
+   "QPSK": 0,
+   "8QAM": 1048,
+   "16QAM": 1098,
+   "32QAM": 304,
+   "64QAM": 0
+  },
+  "mean_feasible_paths": 5.0
+ }
+}

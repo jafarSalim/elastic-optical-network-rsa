@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a0f2c"/><stop offset="1" stop-color="#1a0a33"/></linearGradient>
+<linearGradient id="prism" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7c3aed"/><stop offset=".2" stop-color="#3b82f6"/><stop offset=".4" stop-color="#22d3ee"/><stop offset=".6" stop-color="#a3e635"/><stop offset=".8" stop-color="#facc15"/><stop offset="1" stop-color="#ff4d9d"/></linearGradient>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1200" height="420" fill="url(#bg)"/>
+<!-- fibre links -->
+<g stroke="#2a3170" stroke-width="5" stroke-linecap="round" fill="none">
+<path d="M640 90 L760 70 L880 110 L1010 80 L1120 130"/><path d="M640 90 L700 190 L820 210 L880 110"/><path d="M700 190 L660 290 L800 310 L820 210"/>
+<path d="M800 310 L950 280 L1010 80"/><path d="M950 280 L1080 250 L1120 130"/><path d="M660 290 L760 70"/><path d="M880 110 L950 280"/>
+</g>
+<!-- lightpaths -->
+<g fill="none" stroke-linecap="round" stroke-width="3.5" filter="url(#glow)">
+<path d="M640 90 L700 190 L820 210 L880 110 L1010 80" stroke="#22d3ee" stroke-dasharray="40 1000"><animate attributeName="stroke-dashoffset" values="0;-760" dur="3s" repeatCount="indefinite"/></path>
+<path d="M660 290 L800 310 L950 280 L1080 250 L1120 130" stroke="#facc15" stroke-dasharray="40 1000"><animate attributeName="stroke-dashoffset" values="0;-700" dur="3.6s" repeatCount="indefinite"/></path>
+<path d="M760 70 L880 110 L950 280 L800 310" stroke="#ff4d9d" stroke-dasharray="40 1000"><animate attributeName="stroke-dashoffset" values="0;-600" dur="2.8s" repeatCount="indefinite"/></path>
+<path d="M1120 130 L1010 80 L950 280 L800 310 L660 290" stroke="#a3e635" stroke-dasharray="40 1000"><animate attributeName="stroke-dashoffset" values="0;-760" dur="3.3s" begin="1s" repeatCount="indefinite"/></path>
+<path d="M640 90 L760 70 L880 110 L1010 80 L1120 130" stroke="#a78bfa" stroke-dasharray="40 1000"><animate attributeName="stroke-dashoffset" values="0;-560" dur="2.5s" begin=".5s" repeatCount="indefinite"/></path>
+</g>
+<g fill="#0a0f2c" stroke="#22d3ee" stroke-width="3">
+<circle cx="640" cy="90" r="9"/><circle cx="760" cy="70" r="9"/><circle cx="880" cy="110" r="9"/><circle cx="1010" cy="80" r="9"/><circle cx="1120" cy="130" r="9"/>
+<circle cx="700" cy="190" r="9"/><circle cx="820" cy="210" r="9"/><circle cx="660" cy="290" r="9"/><circle cx="800" cy="310" r="9"/><circle cx="950" cy="280" r="9"/><circle cx="1080" cy="250" r="9"/>
+</g>
+<!-- spectrum grid: one fibre, 320 slots, blocks arriving -->
+<g transform="translate(40 300)">
+<rect width="540" height="70" rx="6" fill="#111842" stroke="#2a3170"/>
+<rect x="10" y="12" width="520" height="46" fill="url(#prism)" opacity=".08"/>
+<g>
+<rect x="10" y="12" width="44" height="46" fill="#7c3aed"><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;.08;.6;.95;1" dur="8s" repeatCount="indefinite"/></rect>
+<rect x="56" y="12" width="70" height="46" fill="#3b82f6"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.12;.2;.95;1" dur="8s" repeatCount="indefinite"/></rect>
+<rect x="128" y="12" width="30" height="46" fill="#22d3ee"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.25;.32;.55;.6;1" dur="8s" repeatCount="indefinite"/></rect>
+<rect x="160" y="12" width="96" height="46" fill="#a3e635"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.36;.44;.95;1" dur="8s" repeatCount="indefinite"/></rect>
+<rect x="258" y="12" width="40" height="46" fill="#facc15"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.5;.56;.95;1" dur="8s" repeatCount="indefinite"/></rect>
+<rect x="300" y="12" width="64" height="46" fill="#fb923c"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.62;.68;.95;1" dur="8s" repeatCount="indefinite"/></rect>
+<rect x="128" y="12" width="30" height="46" fill="#ff4d9d"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.72;.78;.95;1" dur="8s" repeatCount="indefinite"/></rect>
+<rect x="366" y="12" width="110" height="46" fill="#ff4d9d"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.8;.86;.95;1" dur="8s" repeatCount="indefinite"/></rect>
+</g>
+<text x="10" y="-10" font-family="Consolas, monospace" font-size="14" fill="#8b93c9">one fibre · 320 slots × 12.5 GHz · contiguous, continuous, no gaps left behind</text>
+</g>
+<text x="40" y="78" font-family="Segoe UI, Helvetica, Arial" font-size="42" font-weight="800" fill="#e6e9ff">Routing light</text>
+<text x="42" y="116" font-family="Segoe UI, Helvetica, Arial" font-size="19" fill="#22d3ee">route · modulation · spectrum assignment in elastic optical networks</text>
+<text x="42" y="150" font-family="Segoe UI, Helvetica, Arial" font-size="16" fill="#8b93c9">5 heuristics and a PPO agent · NSFNET and Germany50 · GN-model reach</text>
+<text x="42" y="226" font-family="Segoe UI, Helvetica, Arial" font-size="64" font-weight="800" fill="url(#prism)">2.3×<tspan font-size="20" fill="#e6e9ff" font-weight="400" dx="12">fewer blocked requests than k-shortest-path first-fit</tspan></text>
+</svg>
